@@ -1,6 +1,7 @@
 package com.anhtester.common;
 
 import com.anhtester.drivers.DriverManager;
+import com.anhtester.helpers.PropertiesHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,13 +20,17 @@ public class BaseTest {
     @BeforeMethod
     @Parameters({"browser"})
 
-    public void createBrowser(String browserName) {
-        WebDriver driver = setBrowser(browserName);
+    public void createBrowser(@Optional("chrome")String browserName) {
+        //WebDriver driver = setBrowser(browserName);
+        //PropertiesHelper.loadAllFiles();
+        WebDriver driver = setBrowser(PropertiesHelper.getValue("browser"));
+        System.out.println(PropertiesHelper.getValue("timeout"));
+
         DriverManager.setDriver(driver); //Gan gia tri driver vao trong ThreadLocal
 
     }
 
-    public WebDriver setBrowser(@Optional("chrome") String browserName) {
+    public WebDriver setBrowser( String browserName) {
         WebDriver driver = null;
         if (browserName.equals("chrome")) {
             driver = new ChromeDriver();
