@@ -19,7 +19,7 @@ import java.util.Map;
         private FileOutputStream fileOut;
         private Workbook wb;
         private Sheet sh;
-        private Table.Cell cell;
+        private Cell cell;
         private Row row;
         private CellStyle cellstyle;
         private Color mycolor;
@@ -53,5 +53,39 @@ import java.util.Map;
                 System.out.println(e.getMessage());
             }
         }
+        public String getCellData(int columnIndex, int rowIndex) {
+            try {
+                cell = sh.getRow(rowIndex).getCell(columnIndex);
+                String CellData = null;
+                switch (cell.getCellType()) {
+                    case STRING:
+                        CellData = cell.getStringCellValue();
+                        break;
+                    case NUMERIC:
+                        if (DateUtil.isCellDateFormatted(cell)) {
+                            CellData = String.valueOf(cell.getDateCellValue());
+                        } else {
+                            CellData = String.valueOf((long) cell.getNumericCellValue());
+                        }
+                        break;
+                    case BOOLEAN:
+                        CellData = Boolean.toString(cell.getBooleanCellValue());
+                        break;
+                    case BLANK:
+                        CellData = "";
+                        break;
+                }
+                return CellData;
+            } catch (Exception e) {
+                return "";
+            }
+        }
+
+        //Gọi ra hàm này nè
+        public String getCellData(String columnName, int rowIndex) {
+            return getCellData(columns.get(columnName), rowIndex);
+        }
+
     }
+
 
