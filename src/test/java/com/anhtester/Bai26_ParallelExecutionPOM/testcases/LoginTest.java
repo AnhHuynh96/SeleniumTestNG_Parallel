@@ -2,6 +2,7 @@ package com.anhtester.Bai26_ParallelExecutionPOM.testcases;
 
 import com.anhtester.Bai26_ParallelExecutionPOM.pages.LoginPage;
 import com.anhtester.common.BaseTest;
+import com.anhtester.helpers.ExcelHelper;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -14,8 +15,12 @@ public class LoginTest extends BaseTest {
         //De class LoginPage nhan duoc gia tri driver thi moi thuc thi cac ham trong class Page duoc
         loginPage = new LoginPage();
 
+        ExcelHelper excelHelper = new ExcelHelper();
+        excelHelper.setExcelFile("src/test/resources/testdata/LoginData.xlsx","Sheet1");
         //Gọi các hàm xử lý có sẵn để sử dụng
-        loginPage.loginCRM("admin@example.com", "123456");
+        loginPage.loginCRM(
+                excelHelper.getCellData("email",1),
+                excelHelper.getCellData("password",1));
         //WebUI.waitForPageLoaded(); //Khi chuyển trang mới dùng (load trang)
         loginPage.verifyLoginSuccess();
     }

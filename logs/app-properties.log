@@ -1,0 +1,72 @@
+[INFO] 18-08-2024 14:59:46 [main] LogUtils - Day la Log dau tien
+[INFO] 18-08-2024 14:59:46 [main] LogUtils - Day la Log thu 2
+[INFO] 18-08-2024 15:01:00 [main] LogUtils - Day la Log dau tien
+[INFO] 18-08-2024 15:01:00 [main] LogUtils - Day la Log thu 2
+[INFO] 18-08-2024 15:01:00 [main] LogUtils - Day la Log thu 3
+[INFO] 18-08-2024 15:01:00 [main] LogUtils - Day la Log thu 4
+[INFO] 18-08-2024 15:07:50 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:07:50 [main] LogUtils - Set text admin123@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:07:50 [main] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:07:51 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:07:51 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:26:48 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:26:49 [main] LogUtils - Set text admin123@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:26:49 [main] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:26:49 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:26:49 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:26:55 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:26:55 [main] LogUtils - Set text admin@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:26:56 [main] LogUtils - Set text 1234567 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:26:56 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:26:56 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:35:01 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:35:05 [main] LogUtils - onTestStart: testLoginSuccess
+[ERROR] 18-08-2024 15:35:06 [main] LogUtils - onTestFailure: testLoginSuccess
+[INFO] 18-08-2024 15:35:09 [main] LogUtils - onFinish: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:35:39 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:35:43 [main] LogUtils - onTestStart: testLoginWith_EmailInvalid
+[ERROR] 18-08-2024 15:35:43 [main] LogUtils - onTestFailure: testLoginWith_EmailInvalid
+[INFO] 18-08-2024 15:35:45 [main] LogUtils - onFinish: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:43:23 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:43:26 [main] LogUtils - onTestStart: testLoginSuccess
+[INFO] 18-08-2024 15:43:28 [main] LogUtils - ===> testLoginSuccessis failed
+[INFO] 18-08-2024 15:43:30 [main] LogUtils - onFinish: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:45:40 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:45:43 [main] LogUtils - onTestStart: testLoginWith_PasswordInvalid
+[INFO] 18-08-2024 15:45:45 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:45:45 [main] LogUtils - Set text admin@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:45:45 [main] LogUtils - Set text 1234567 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:45:46 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:45:46 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:45:46 [main] LogUtils - ===> testLoginWith_PasswordInvalidis successfully
+[INFO] 18-08-2024 15:45:48 [main] LogUtils - onFinish: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:50:30 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:50:33 [main] LogUtils - --------
+[INFO] 18-08-2024 15:50:33 [main] LogUtils - ****************testLoginSuccess**************
+[INFO] 18-08-2024 15:50:34 [main] LogUtils - ===> testLoginSuccessis failed
+[INFO] 18-08-2024 15:50:39 [main] LogUtils - --------
+[INFO] 18-08-2024 15:50:39 [main] LogUtils - ****************testLoginWith_EmailInvalid**************
+[INFO] 18-08-2024 15:50:40 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:50:41 [main] LogUtils - Set text admin123@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:50:41 [main] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:50:41 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:50:41 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:50:41 [main] LogUtils - ===> testLoginWith_EmailInvalidis successfully
+[INFO] 18-08-2024 15:50:46 [main] LogUtils - --------
+[INFO] 18-08-2024 15:50:46 [main] LogUtils - ****************testLoginWith_PasswordInvalid**************
+[INFO] 18-08-2024 15:50:47 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:50:47 [main] LogUtils - Set text admin@example.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:50:47 [main] LogUtils - Set text 1234567 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:50:48 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 18-08-2024 15:50:48 [main] LogUtils - Get text of element By.xpath: //div[@id='alerts'] is: Invalid email or password
+[INFO] 18-08-2024 15:50:48 [main] LogUtils - ===> testLoginWith_PasswordInvalidis successfully
+[INFO] 18-08-2024 15:50:50 [main] LogUtils - onFinish: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:53:39 [main] LogUtils - onStart: SeleniumTestNG_Parallel
+[INFO] 18-08-2024 15:53:42 [main] LogUtils - --------
+[INFO] 18-08-2024 15:53:42 [main] LogUtils - ****************testLoginCRM_Fail**************
+[INFO] 18-08-2024 15:53:46 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 18-08-2024 15:53:46 [main] LogUtils - Set text anhtest@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 18-08-2024 15:53:46 [main] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 18-08-2024 15:53:46 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[ERROR] 18-08-2024 15:53:47 [main] LogUtils - ===> testLoginCRM_Failis failed
+[INFO] 18-08-2024 15:53:49 [main] LogUtils - onFinish: SeleniumTestNG_Parallel

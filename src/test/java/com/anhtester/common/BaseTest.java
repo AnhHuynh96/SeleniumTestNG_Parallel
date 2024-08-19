@@ -1,19 +1,19 @@
 package com.anhtester.common;
 
 import com.anhtester.drivers.DriverManager;
+import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.helpers.PropertiesHelper;
+import com.anhtester.listener.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
-
+@Listeners(TestListener.class)
 public class BaseTest {
 
 
@@ -22,7 +22,7 @@ public class BaseTest {
 
     public void createBrowser(@Optional("chrome")String browserName) {
         //WebDriver driver = setBrowser(browserName);
-        //PropertiesHelper.loadAllFiles();
+        PropertiesHelper.loadAllFiles();
         WebDriver driver = setBrowser(PropertiesHelper.getValue("browser"));
         System.out.println(PropertiesHelper.getValue("timeout"));
 
@@ -43,7 +43,7 @@ public class BaseTest {
         }
 
         driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); //Dành cho Junior
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); // Dành cho Junior
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         return driver;
 
@@ -58,6 +58,12 @@ public class BaseTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+//        public void closeBrowser(ITestResult iTestResult) {
+//        // Chup man hinh khi test case bi FAIL. Nguoc lai ko chup
+//        if (ITestResult.FAILURE == iTestResult.getStatus()) {
+//            CaptureHelper.captureScreenshot(iTestResult.getName());
+//            }
+//        CaptureHelper.stopRecord();
         DriverManager.quit();
     }
 }
